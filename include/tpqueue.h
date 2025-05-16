@@ -1,4 +1,5 @@
 // Copyright 2022 NNTU-CS
+#include <string>
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
@@ -18,7 +19,7 @@ class TPQueue {
 
  public:
   TPQueue() : head(nullptr), tail(nullptr), count(0), capacity(-1) {}
-  TPQueue(int size) : head(nullptr), tail(nullptr), count(0), capacity(size) {
+  explicit TPQueue(int size) : head(nullptr), tail(nullptr), count(0), capacity(size) {
     if (size <= 0) {
       throw std::string("Queue size must be positive");
     }
