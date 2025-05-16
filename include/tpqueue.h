@@ -19,11 +19,6 @@ class TPQueue {
 
  public:
   TPQueue() : head(nullptr), tail(nullptr), count(0), capacity(-1) {}
-  explicit TPQueue(int size) : head(nullptr), tail(nullptr), count(0), capacity(size) {
-    if (size <= 0) {
-      throw std::string("Queue size must be positive");
-    }
-  }
   bool isFull() const {
     return capacity != -1 && count == capacity;
   }
